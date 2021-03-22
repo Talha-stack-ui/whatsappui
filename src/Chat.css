@@ -84,3 +84,63 @@
   padding: 10px;
   color: grey;
 }
+
+.showmore {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+#more_chat {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 200px;
+  z-index: 1;
+}
+#more_chat ul {
+  list-style-type: none;
+}
+#more_chat ul li {
+  background-color: #ffff;
+  text-align: center;
+  margin-left: -40px;
+  padding: 3px;
+}
+#more_chat ul li a {
+  text-decoration: none;
+  color: black;
+}
+#more_chat ul li a:hover {
+  color: #b9aeae;
+}
+
+#more_attach {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 110px;
+  width: 100px;
+  z-index: 1;
+}
+#more_attach ul {
+  list-style-type: none;
+}
+#more_attach ul li {
+  background-color: #ffff;
+  text-align: center;
+  margin-left: -40px;
+  padding: 3px;
+}
+#more_attach ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#more_attach ul li a .MuiSvgIcon-root {
+  font-size: 30px;
+}
+
+#more_attach ul li a:hover {
+  color: #b9aeae;
+}

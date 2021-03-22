@@ -48,3 +48,27 @@
   overflow-y: scroll;
   background-color: white;
 }
+
+#more_sidebar {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 200px;
+  z-index: 1;
+}
+#more_sidebar ul {
+  list-style-type: none;
+}
+#more_sidebar ul li {
+  background-color: #ffff;
+  text-align: center;
+  margin-left: -40px;
+  padding: 3px;
+}
+#more_sidebar ul li a {
+  text-decoration: none;
+  color: black;
+}
+#more_sidebar ul li a:hover {
+  color: #b9aeae;
+}

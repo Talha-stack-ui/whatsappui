@@ -12,6 +12,17 @@ import img3 from './img3.jpg';
 import img4 from './img4.jpg';
 
 function Sidebar() {
+
+
+    function moreSidebar() {
+        var x = document.getElementById("more_sidebar");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      };
+
     return (
         <div className="sidebar">
             <div className="sidebar_header">
@@ -24,8 +35,19 @@ function Sidebar() {
                 <ChatIcon />
                 </IconButton>
                 <IconButton>
-                <MoreVertIcon />
+                <MoreVertIcon onClick={moreSidebar}/>
                 </IconButton>
+
+                <div id="more_sidebar"><ul>
+                    <li><a href='#'>New Group</a></li>
+                    <li><a href='#'>Create a Room</a></li>
+                    <li><a href='#'>Profile</a></li>
+                    <li><a href='#'>Archived</a></li>
+                    <li><a href='#'>Starred</a></li>
+                    <li><a href='#'>Settings</a></li>
+                    <li><a href='#'>Log Out</a></li>
+                </ul></div>
+
              </div>
              </div>
 
@@ -40,8 +62,8 @@ function Sidebar() {
                 <SidebarChat addNewChat/>
                 <SidebarChat room='Talha' img={img1} />
                 <SidebarChat room='Hammad' img={img2} />
-                <SidebarChat room='Kaleem' img={img3}/>
-                <SidebarChat room='Hasan' img={img4}/> 
+                <SidebarChat room='Kaleem' img={img3} />
+                <SidebarChat room='Hasan' img={img4} /> 
             </div>
         </div>
     )
