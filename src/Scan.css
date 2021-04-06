@@ -1,0 +1,91 @@
+.main {
+  background-color: #dadbd3;
+  height: 140vh;
+  place-items: center;
+  display: block;
+}
+.name {
+  background-color: #1da1f2;
+  width: 100%;
+  height: 30vh;
+}
+.status {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  margin: 20px 0px 0px 8%;
+}
+.name span {
+  position: absolute;
+  top: 35px;
+  left: 180px;
+  color: white;
+}
+.main_body {
+  display: flex;
+  background-color: #ededed;
+  height: 90vh;
+  width: 70vw;
+  margin-top: -110px;
+  box-shadow: -1px 4px 20px -6px grey;
+  position: relative;
+  left: 210px;
+}
+#use {
+  font-size: 25px;
+  font-weight: 100;
+  position: relative;
+  top: -30px;
+  left: 80px;
+  color: grey;
+  margin-bottom: 80px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.guide {
+  position: relative;
+  top: -250px;
+  left: 78px;
+}
+.guide p {
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 15px;
+}
+.guide p span {
+  color: black;
+}
+.main_body {
+  display: flex;
+}
+.scan {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: 200px;
+  top: 30px;
+}
+.scan span {
+  font-size: 15px;
+  color: grey;
+}
+.video {
+  background-color: lightgrey;
+  width: 956px;
+  height: 50vh;
+  position: absolute;
+  top: 400px;
+  box-shadow: -5px 0 5px -5px grey, 5px 0 5px -5px grey;
+}
+.video video {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 240px;
+  top: -85px;
+  outline: none;
+  object-fit: contain;
+}

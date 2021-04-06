@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Avatar , IconButton } from '@material-ui/core';
 import  DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -11,9 +11,18 @@ import img2 from './img2.jpg';
 import img3 from './img3.jpg';
 import img4 from './img4.jpg';
 
-function Sidebar() {
 
+const info = [
+    {user:'Talha' , dp:img1},
+    {user:'Hamza' , dp:img2},
+    {user:'Hasan' , dp:img3},
+    {user:'Kaleem' , dp:img4}
 
+];
+
+function Sidebar({setCname}) {
+
+    
     function moreSidebar() {
         var x = document.getElementById("more_sidebar");
         if (x.style.display === "none") {
@@ -22,6 +31,9 @@ function Sidebar() {
           x.style.display = "none";
         }
       };
+
+      
+
 
     return (
         <div className="sidebar">
@@ -60,10 +72,10 @@ function Sidebar() {
 
             <div className="sidebar_chats">
                 <SidebarChat addNewChat/>
-                <SidebarChat room='Talha' img={img1} />
-                <SidebarChat room='Hammad' img={img2} />
-                <SidebarChat room='Kaleem' img={img3} />
-                <SidebarChat room='Hasan' img={img4} /> 
+               { info.map((x)=>(<SidebarChat room={x.user} img={x.dp} setCname={setCname}/>))
+                }
+
+
             </div>
         </div>
     )

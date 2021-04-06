@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './SidebarChat.css';
-import {Avatar} from '@material-ui/core'
+import {Avatar} from '@material-ui/core';
 
 
 
@@ -9,12 +9,17 @@ const createChat = () => {
 };
 
 
-function SidebarChat({room, img, addNewChat}) {
+
+function SidebarChat({room, img, addNewChat,setCname}) {
+
+const onClickButton = (name) =>{
+  setCname(name);
+};
     return !addNewChat ? (
         <div className="sidebarChat">
             <Avatar src={img}/>
             <div className="sidebarChat_info">
-                <h2>{room}</h2>
+                <h2 onClick={()=>onClickButton(room)}>{room}</h2>
                 <p>Last Message...</p>
             </div>
         </div>

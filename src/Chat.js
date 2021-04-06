@@ -14,10 +14,9 @@ import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 import VideoCallRoundedIcon from '@material-ui/icons/VideoCallRounded';
 
 
-
-
-function Chat({roomName}) {
+function Chat({cname}) {
 const [input,setInput]=useState("");
+
 
 
 const sendMessage = (e) =>{
@@ -49,7 +48,7 @@ function moreChat() {
             <div className="chat_header">
                 <Avatar />
                 <div className="chat_headerInfo">
-                <h3>Room name</h3>
+                <h3>{cname}</h3>
                 <p>Last seen at...</p>
                 </div>
                  <div className="chat_headerRight">
@@ -82,7 +81,7 @@ function moreChat() {
                  </div>
             <div className="chat_body">
                     <p className="chat_message">
-                    <span className="chat_name">Talha</span>Hey Guys!
+                    <span className="chat_name">{cname}</span>Hey Guys!
                     <span className="chat_time">2:49 pm</span></p>
                  
                     <p className="chat_message chat_receiver">
